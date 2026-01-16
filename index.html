@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8>
-<meta name="viewport" conetent="width=device-width, initial-scale=1.0">
-<title>title</title>
+    <meta charset="utf-8>
+    <meta name=" viewport" conetent="width=device-width, initial-scale=1.0">
+    <title>title</title>
 </head>
+<style>
+    body {
+        font-family: Arial, sans-sarif;
+        margin: 20px;
+        background-color: Xf4f4f4;
+    }
+
+    h1 {
+        color: #8e4fd6;
+    }
+
+    .login-container {
+        border: solid blue;
+    }
+
+    h2 {
+        color: rgb(194, 58, 123);
+        background-color: rgb(200, 200, 0.1);
+    }
+</style>
+
 <body>
 
 
-<h1>hello internet<h1>
+    <h1>Hello internet<h1>
+            <p>From internet</p>
 
+            <h2>features</h2>
+            <ul>
+                <li>login</li>
+                <li>search</li>
+                <li>content "card"</li>
+                <li>footer</li>
+            </ul>
+            <!--this is my vanilla html form-->
+            <div class="login-container">
+                <h2>Plain Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn-login">Login</button>
+                    <div id="message" class="message"></div>
+                </form>
+            </div>
+            <script>
+                consle.log("password is: lasagna")
+            </script>
 </body>
+
+</html>
