@@ -28,38 +28,38 @@
 </style>
 
 <body>
+    <h1>Hello internet</h1>
+    <p>From internet</p>
 
+    <h2>features</h2>
+    <ul>
+        <li>login</li>
+        <li>search</li>
+        <li>content "card"</li>
+        <li>footer</li>
+    </ul>
 
-    <h1>Hello internet<h1>
-            <p>From internet</p>
-
-            <h2>features</h2>
-            <ul>
-                <li>login</li>
-                <li>search</li>
-                <li>content "card"</li>
-                <li>footer</li>
-            </ul>
-            <!--this is my vanilla html form-->
-            <div class="login-container">
-                <h2>Plain Login</h2>
-                <form id="loginForm">
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" name="username" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
-                    <button type="submit" class="btn-login">Login</button>
-                    <div id="message" class="message"></div>
-                </form>
+    <div class="login-container">
+        <h2>Plain Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
             </div>
-            <script>
-                consle.log("password is: lasagna")
-            </script>
-</body>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn-login">Login</button>
+            <div id="message" class="message"></div>
+        </form>
+    </div>
 
+    <script>
+        // Fixed the spelling from 'consle' to 'console'
+        console.log("The DOM is fully loaded. Password hint: lasagna");
+    </script>
+</body>
 </html>
+
 
