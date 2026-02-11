@@ -1,5 +1,7 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Rubik+Mono+One&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
 
 body {
@@ -7,15 +9,6 @@ body {
     font-family: "Roboto", sans-serif;
     margin: 20px;
     background-color: #f4f4f4;
-}
-
-h1 {
-    color: #8e4fd6;
-}
-
-h2 {
-    color: rgb(194, 153, 53);
-    background-color: rgba(200, 200, 200, 0.1);
 }
 
 .rubik-mono-one-regular {
