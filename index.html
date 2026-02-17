@@ -1,119 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AJ</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-  <!-- internal stylesheet < html doc/dom itself -->
-  <style>
-    body {
-      font-family: Arial, sans-seri
-      margin: 20px;
-      background-color: #f4f4f4;
-    }
-
-    h1 {
-      color: #8e4fd6;
-    }
-
-    h2 {
-      color: rgb(194, 153, 53);
-      background-color: rgba(200, 200, 200, 0.1);
-    }
-
-    .login-container {
-      border: solid 1px blue;
-    }
-
-    #author {
-      text-decoration: underline;
-    }
-
-    
-    .login-container {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      max-width: 300px;
-      margin-top: 20px;
-    }
-
-    .form-group {
-      margin-bottom: 15px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    input[type="text"],
-    input[type="password"] {
-      width: 100%;
-      padding: 8px;
-      box-sizing: border-box;
-    }
-
-    .btn-login {
-      background-color: #28a745;
-      color: white;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    .btn-login:hover {
-      background-color: #218838;
-    }
-
-    .message {
-      margin-top: 10px;
-      color: red;
-    } */
-
-    .inlineList>li {
-      display: inline;
-    }
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #8e4fd6;
+        }
+        .login-container {
+            border: 2px solid blue;
+            padding: 20px;
+            max-width: 300px;
+            background-color: white;
+        }
+        h2 {
+            color: rgb(194, 58, 123);
+            background-color: rgba(200, 200, 0, 0.1);
+            padding: 5px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        .message {
+            margin-top: 10px;
+            color: red;
+        }
+    </style>
 </head>
-
 <body>
+    <h1>Hello internet</h1>
+    <p>From internet</p>
+    
+    <h2>Features</h2>
+    <ul>
+        <li>Login</li>
+        <li>Search</li>
+        <li>Content "card"</li>
+        <li>Footer</li>
+    </ul>
 
-  <h1>Uncaffinated News Website</h1>
-  <p id="author">by AJ</p>
+    <div class="login-container">
+        <h2>Plain Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username</label><br>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn-login">Login</button>
+            <div id="message" class="message"></div>
+        </form>
+    </div>
 
-  <h2>Welcome to my Website</h2>
-  <ul>
-    <li>Go login and look at the news I made</li>
-    <li><xmp><code />Nice to meet you.</xmp> 
-    <li>we've got all the news<xmp>
-        <html>
-      </xmp> 
-  </ul>
-  <ul>
-    <li>Login to see my news</li>
-  </ul>
-
-  <a href="http://Login.html/">js login</a>
-
-
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const messageDiv = document.getElementById('message');
+            messageDiv.textContent = "Password hint: lasagna";
+            console.log("The DOM is fully loaded and the form was submitted.");
+            console.log("Hint: lasagna");
+        });
+    </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
