@@ -22,15 +22,6 @@ document.addEventListener('submit', function (event) {
   console.log('session username:', username);
   console.log('session password:', password);
 
-  window.location.assign("content.html"); 
-  
+  window.location.assign("layout.html"); 
 
-    
-    if (loginForm) {
-        loginForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Stop standard form submission
-            console.log("Login successful, redirecting...");
-            window.location.href = 'layout.html'; 
-        });
-    }
 });
