@@ -23,5 +23,18 @@ document.addEventListener('submit', function (event) {
   console.log('session password:', password);
 
   window.location.assign("content.html"); 
-
+  
+// login-script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.getElementById('loginForm');
+    
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Stop standard form submission
+            console.log("Login successful, redirecting...");
+            
+            // This takes the user to layout.html as requested
+            window.location.href = 'layout.html'; 
+        });
+    }
 });
