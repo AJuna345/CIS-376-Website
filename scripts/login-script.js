@@ -23,5 +23,21 @@ document.addEventListener('submit', function (event) {
   console.log('session password:', password);
 
   window.location.assign("layout.html"); 
+// This goes inside login-script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.getElementById('loginForm');
 
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(event) {
+            // 1. Always prevent the page from refreshing first
+            event.preventDefault(); 
+            
+            // 2. Add your logic here
+            console.log("Login form submitted!");
+            
+            // 3. Perform the redirect to layout.html
+            window.location.href = 'layout.html'; 
+        });
+    }
+});
 });
