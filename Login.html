@@ -1,65 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - CIS 376</title>
-    
-    <style>
-        body {
-            /* Fixed 'sans-sarif' typo and 'Xf4f4f4' color syntax */
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            color: #8e4fd6;
-        }
-        .login-container {
-            border: 2px solid blue;
-            padding: 20px;
-            background-color: white;
-            display: inline-block;
-        }
-        h2 {
-            color: rgb(194, 58, 123);
-            /* Updated to rgba for the transparency value you had */
-            background-color: rgba(200, 200, 0, 0.1); 
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Login here</h1>
-    
-    <div class="login-container">
-        <h2>Please enter username and password</h2>
-        <form id="loginForm">
-            <div class="form-group">
-                <label for="username">Username</label><br>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label><br>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit" class="btn-login">Login</button>
-            <div id="message" class="message"></div>
-        </form>
+// show login or logout btn, based on session state
+// toast msg upon logout 
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  showSignInOut(); 
+
+  document.getElementById('btnLogout').addEventListener('click', ()=>{
+    showLogoutToast(); 
+    sessionStorage.clear();
+    showSignInOut(); 
+  }); 
+
+});
+
+
+function isAuthN() {
+  return sessionStorage.getItem('isAuthN') === 'true';
+}
+function showSignInOut() {
+  if (isAuthN()) {
+    //show logout
+    const btnLogout = document.getElementById('btnLogout');
+    btnLogout.classList.remove('d-none'); 
+
+    //hide login
+    const btnLogin = document.getElementById('btnLogin');
+    btnLogin.classList.add('d-none'); 
+  }
+  else if(!isAuthN()){
+     //hide logout
+    const btnLogout = document.getElementById('btnLogout');
+    btnLogout.classList.add('d-none'); 
+
+    //show login
+    const btnLogin = document.getElementById('btnLogin');
+    btnLogin.classList.remove('d-none'); 
+  }
+
+}
+
+// Show a Bootstrap 5 toast message for logout
+function showLogoutToast() {
+  // Create toast container if it doesn't exist
+  const toastContainer = document.getElementById('toast-container');
+  // Create toast element
+  const toast = document.createElement('div');
+  toast.className = 'toast align-items-center text-bg-success border-0 show';
+  toast.setAttribute('role', 'alert');
+  toast.setAttribute('aria-live', 'assertive');
+  toast.setAttribute('aria-atomic', 'true');
+  toast.innerHTML = `
+    <div class="d-flex">
+      <div class="toast-body">
+        You have been logged out.
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
+  `;
+  toastContainer.appendChild(toast);
 
-    <p><a href="index.html">Return to Home</a></p>
-
-    <script>
-        // Keeping your console log and adding a small submission message
-        console.log("The DOM is fully loaded.");
-        
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            document.getElementById('message').innerText = "Hint: lasagna";
-        });
-    </script>
-</body>
-</html>
+  // Automatically remove toast after 3 seconds
+  setTimeout(() => {
+    toast.remove();
+  }, 3000);
+}
