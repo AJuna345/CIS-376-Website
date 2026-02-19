@@ -16,7 +16,6 @@ function renderSearchResults(items) {
   console.log("Full array being rendered:", items);
   
   items.forEach(word => {
-    console.log(`Processing item ${index}:`, word);
     const li = document.createElement("li");
     li.textContent = word;
     searchResults.appendChild(li);
