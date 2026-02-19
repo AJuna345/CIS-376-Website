@@ -41,6 +41,7 @@ function handleSearch() {
 searchInput.addEventListener("input", handleSearch);
 
 // Search on button click
-searchButton.addEventListener("click", handleSearch);
+// searchButton.addEventListener("click", handleSearch);
+
 renderSearchResults(jsArrayData);
 
