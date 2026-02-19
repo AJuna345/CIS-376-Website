@@ -2,6 +2,15 @@ const searchInput = document.getElementById("searchInput");
 const searchButton = document.getElementById("searchButton");
 const searchResults = document.getElementById("searchResults");
 
+const jsArrayData = [
+    "Acura", "Audi", "BMW", "Cadillac", "Chevrolet", "Chrysler", "Dodge", 
+    "Ferrari", "Fiat", "Ford", "GMC", "Honda", "Hyundai", "Infiniti", 
+    "Jaguar", "Jeep", "Kia", "Lamborghini", "Land Rover", "Lexus", 
+    "Lincoln", "Mazda", "McLaren", "Mercedes-Benz", "Mitsubishi", 
+    "Nissan", "Porsche", "Rivian", "Subaru", "Tesla", "Toyota", 
+    "Volkswagen", "Volvo"
+];
+
 function renderSearchResults(items) {
   searchResults.innerHTML = "";
   console.log("Full array being rendered:", items);
