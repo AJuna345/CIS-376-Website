@@ -13,7 +13,6 @@ const jsArrayData = [
 
 function renderSearchResults(items) {
   searchResults.innerHTML = "";
-  console.log("Full array being rendered:", items);
   
   items.forEach(word => {
     const li = document.createElement("li");
