@@ -4,8 +4,10 @@ const searchResults = document.getElementById("searchResults");
 
 function renderSearchResults(items) {
   searchResults.innerHTML = "";
-
+  console.log("Full array being rendered:", items);
+  
   items.forEach(word => {
+    console.log(`Processing item ${index}:`, word);
     const li = document.createElement("li");
     li.textContent = word;
     searchResults.appendChild(li);
@@ -29,7 +31,7 @@ function handleSearch() {
 }
 
 // Search as you type
-// searchInput.addEventListener("input", handleSearch);
+searchInput.addEventListener("input", handleSearch);
 
 // Search on button click
 searchButton.addEventListener("click", handleSearch);
