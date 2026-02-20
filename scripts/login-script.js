@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log("Password correct. Redirecting to News...");
                 
                 // Change the destination to news.html
-                window.location.href = 'news.html'; 
+                window.location.href = "news.html"; 
             } else {
                 // Handle incorrect password
                 if (messageDiv) {
