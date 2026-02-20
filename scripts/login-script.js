@@ -1,29 +1,40 @@
+// Wait for the HTML to fully load before running the script
 document.addEventListener('DOMContentLoaded', () => {
+    
+    // Grab the form and the message area by their IDs
     const loginForm = document.getElementById('loginForm');
     const messageDiv = document.getElementById('message');
 
+    // Only run this if the login form actually exists on the page
     if (loginForm) {
         loginForm.addEventListener('submit', function(event) {
-            // Stop the form from refreshing the page
+            // 1. Prevent the page from refreshing
             event.preventDefault(); 
             
-            // Get values from the index.html inputs
-            const password = document.getElementById('password').value;
+            // 2. Get the password typed by the user
+            const passwordInput = document.getElementById('password');
+            const passwordValue = passwordInput ? passwordInput.value : '';
 
-            // Validate the password
-            if (password === 'lasagna') {
-                console.log("Password correct. Redirecting to News...");
+            // 3. Validate the password
+            if (passwordValue === 'lasagna') {
+                console.log("Login successful! Redirecting...");
                 
-                // Change the destination to news.html
-                window.location.href = "news.html"; 
+                // Clear any old error messages
+                if (messageDiv) messageDiv.textContent = "";
+                
+                // 4. Redirect to your combined news dashboard
+                // Change 'layout.html' to 'news.html' if that is what you named your file
+                window.location.href = 'layout.html'; 
             } else {
-                // Handle incorrect password
+                // 5. Handle the wrong password
+                console.log("Login failed: Incorrect password.");
                 if (messageDiv) {
-                    messageDiv.textContent = "Incorrect password. Access denied.";
                     messageDiv.style.color = "red";
+                    messageDiv.textContent = "Incorrect password. Access denied.";
                 }
-                console.log("Access denied: Incorrect password.");
             }
         });
+    } else {
+        console.error("The form with id='loginForm' was not found on this page.");
     }
 });
