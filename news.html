@@ -7,14 +7,35 @@
     <title>News Feed | CIS-376</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../bear-style.css" rel="stylesheet">
     
     <style>
-        body { background-color: #f4f4f4; padding-top: 30px; }
-        .card { margin-bottom: 20px; height: 100%; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .card-img { height: 200px; object-fit: cover; }
-        .card-title { font-size: 1.25rem; color: #8e4fd6; padding: 15px 15px 0; }
-        .card-body { padding: 15px; }
+        body { background-color: #f4f4f4; padding: 40px 0; }
+        
+        /* Forces all cards in a row to be the same height */
+        .card { 
+            height: 100%; 
+            display: flex; 
+            flex-direction: column;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .card:hover { transform: translateY(-5px); }
+
+        /* Forces all images to be the exact same height and width without distorting */
+        .card-img-top { 
+            height: 220px; 
+            object-fit: cover; 
+            width: 100%;
+        }
+
+        /* Ensures the footer stays at the very bottom of the card */
+        .card-footer {
+            margin-top: auto;
+            background: white;
+            border-top: 1px solid #eee;
+        }
+
+        .card-title { font-size: 1.2rem; color: #8e4fd6; min-height: 3.6em; }
     </style>
 </head>
 
@@ -25,102 +46,71 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
 
         <div class="col">
-            <div class="card">
-                <h2 class="card-title">Rescuing Animals With Thrift Shops</h2>
-                <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXddw0rBEf1J1uQGKGEIPVfVu1QS1WJAMKUzkkZUsXJ6C1dWPfA3bs3DzaaK4FYA8fzU-BvbJdksuOwmWp_PWdaoTm8sCI6ZUAcCBrkM3Duv8eS33W5C04z0sIROmrseBYLohzep?key=YXzl5wdtjSIacjqttgx-zkcu" alt="Animal Rescue" class="card-img-top">
+            <div class="card h-100">
+                <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Thrift Shop">
                 <div class="card-body">
-                    <p class="card-text">Blurg</p>
+                    <h5 class="card-title">Rescuing Animals With Thrift Shops</h5>
+                    <p class="card-text">Students are finding new ways to fund local shelters through sustainable shopping.</p>
                 </div>
-                <div class="card-footer bg-white border-0">
-                    <a href="https://uncaffeinatednews.wordpress.com/2025/04/27/rescuing-animals-with-thrift-shops/"
-                        target="_blank" class="btn btn-outline-success w-100">Read More</a>
+                <div class="card-footer">
+                    <a href="https://uncaffeinatednews.wordpress.com/2025/04/27/rescuing-animals-with-thrift-shops/" target="_blank" class="btn btn-outline-success w-100">Read More</a>
                 </div>
             </div>
         </div>
 
         <div class="col">
-            <div class="card">
-                <h2 class="card-title">Project Pond Connects Students</h2>
-                <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfxdlW4Mf5Uf2JNW9KirsBo_0PkTjxzRiC73iVeD2ABcQdAa88d21c2BCcuIzdaf54VVSmLZhH0CtkBlu3WmR8BwDPYKjzKbC715W2Bk8_0QF4hOITPIvqSRtol1cZvUrGPfzKRXQ?key=R2njkoTwF9M5DVtbTE2HA5_S" alt="Project Pond" class="card-img-top">
+            <div class="card h-100">
+                <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Project Pond">
                 <div class="card-body">
-                    <p class="card-text">Blurg</p>
+                    <h5 class="card-title">Project Pond Connects Students</h5>
+                    <p class="card-text">A look at the new ecosystem project bridging the gap between classroom and nature.</p>
                 </div>
-                <div class="card-footer bg-white border-0">
-                    <a href="https://uncaffeinatednews.wordpress.com/2025/04/06/project-pond-connects-students-with-animals-and-ecosystems/"
-                        target="_blank" class="btn btn-outline-success w-100">Read More</a>
+                <div class="card-footer">
+                    <a href="https://uncaffeinatednews.wordpress.com/2025/04/06/project-pond-connects-students-with-animals-and-ecosystems/" target="_blank" class="btn btn-outline-success w-100">Read More</a>
                 </div>
             </div>
         </div>
 
         <div class="col">
-            <div class="card">
-                <h2 class="card-title">OBB Revives Downtown Madison</h2>
-                <img src="https://uncaffeinatednews.wordpress.com/wp-content/uploads/2024/12/falconpunch-2.png?w=1024" alt="Downtown Madison" class="card-img-top">
+            <div class="card h-100">
+                <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Madison">
                 <div class="card-body">
-                    <p class="card-text">Blurg</p>
+                    <h5 class="card-title">OBB Revives Downtown Madison</h5>
+                    <p class="card-text">Revitalization efforts are bringing new life to the heart of the city.</p>
                 </div>
-                <div class="card-footer bg-white border-0">
-                    <a href="https://uncaffeinatednews.wordpress.com/2025/03/30/obb-revives-downtown-madison/"
-                        target="_blank" class="btn btn-outline-success w-100">Read More</a>
+                <div class="card-footer">
+                    <a href="https://uncaffeinatednews.wordpress.com/2025/03/30/obb-revives-downtown-madison/" target="_blank" class="btn btn-outline-success w-100">Read More</a>
                 </div>
             </div>
         </div>
 
         <div class="col">
-            <div class="card">
-                <h2 class="card-title">Major Construction in Florence</h2>
-                <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXen8wI-YaHzNSEAMWgQujEYczOE3_sFfEk0DQs8Jw-i898gKY8balHH7tK1Mtx9Is3_zLXrevbwk90AXDW4RbPeflSdhoIkhcXInfF4W-WRuClg2y6Y3CRE4nbT3RcQIkKD8BTG?key=7AWIi6IWCbc0SzXONbodXzwm" alt="Construction" class="card-img-top">
+            <div class="card h-100">
+                <img src="https://uncaffeinatednews.wordpress.com/wp-content/uploads/2025/02/shelterdog.png?w=1024" class="card-img-top" alt="Shelter Dog">
                 <div class="card-body">
-                    <p class="card-text">Blurg</p>
+                    <h5 class="card-title">Major Construction in Florence</h5>
+                    <p class="card-text">Infrastructure updates in Florence are aiming to improve traffic flow and safety.</p>
                 </div>
-                <div class="card-footer bg-white border-0">
-                    <a href="https://uncaffeinatednews.wordpress.com/2025/03/12/major-construction-projects-in-florence-alabama/"
-                        target="_blank" class="btn btn-outline-success w-100">Read More</a>
+                <div class="card-footer">
+                    <a href="https://uncaffeinatednews.wordpress.com/2025/03/12/major-construction-projects-in-florence-alabama/" target="_blank" class="btn btn-outline-success w-100">Read More</a>
                 </div>
             </div>
         </div>
 
         <div class="col">
-            <div class="card">
-                <h2 class="card-title">Campaign Chronicles: DnD</h2>
-                <img src="https://www.belloflostsouls.net/wp-content/uploads/2022/11/dnd-boulder-horz.jpg" alt="D&D Campaign" class="card-img-top">
+            <div class="card h-100">
+                <img src="https://www.belloflostsouls.net/wp-content/uploads/2022/11/dnd-boulder-horz.jpg" class="card-img-top" alt="D&D">
                 <div class="card-body">
-                    <p class="card-text">Blurg</p>
+                    <h5 class="card-title">Campaign Chronicles: DnD</h5>
+                    <p class="card-text">Tabletop gaming is seeing a massive surge in popularity across campus groups.</p>
                 </div>
-                <div class="card-footer bg-white border-0">
-                    <a href="https://uncaffeinatednews.wordpress.com/2024/12/03/campaign-chronicles-tales-from-the-table/"
-                        target="_blank" class="btn btn-outline-success w-100">Read More</a>
+                <div class="card-footer">
+                    <a href="https://uncaffeinatednews.wordpress.com/2024/12/03/campaign-chronicles-tales-from-the-table/" target="_blank" class="btn btn-outline-success w-100">Read More</a>
                 </div>
             </div>
         </div>
-        
- <div class="col">
-            <div class="card">
-                <h2 class="card-title">Presidental Campaign</h2>
-                <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdg05QI9E_ZKcfOZI4fuxxmA9YLdL__jvUwImTSVDqU1qp2C7vteBU_j024fC3WensCbCAlZNG66HJkWEKE39s8-3u2-kPVWawWWuTAMk-BioxZfqeVwGnMo_N6DzmbU34ja-zsR062t-Ogt5AGcJWbGtk?key=FKMDb_O4BJJzy33lNsB3xw">
-                <div class="card-body">
-                    <p class="card-text">Blurg</p>
-                </div>
-                <div class="card-footer bg-white border-0">
-                    <a href="https://uncaffeinatednews.wordpress.com/2024/12/01/presidential-debate/"
-                        target="_blank" class="btn btn-outline-success w-100">Read More</a>
-                </div>
-            </div>
-        </div>
+
     </div>
- <div class="col">
-            <div class="card">
-                <h2 class="card-title">Time to upgrade to Mirrorless</h2>
-                <img src="https://uncaffeinatednews.wordpress.com/wp-content/uploads/2024/12/technology-camera-technology-travel-preview.jpg">
-                <div class="card-body">
-                    <p class="card-text">Blurg</p>
-                </div>
-                <div class="card-footer bg-white border-0">
-                    <a href="https://uncaffeinatednews.wordpress.com/2024/11/30/is-it-time-to-upgrade-to-a-mirrorless-camera/"
-                        target="_blank" class="btn btn-outline-success w-100">Read More</a>
-                </div>
-            </div>
-        </div>
-    </div>
+
 </body>
 </html>
