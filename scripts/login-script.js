@@ -4,28 +4,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (loginForm) {
         loginForm.addEventListener('submit', function(event) {
-            
+            // Stop the form from refreshing the page
             event.preventDefault(); 
             
-      
-            const username = document.getElementById('username').value;
+            // Get values from the index.html inputs
             const password = document.getElementById('password').value;
 
-            
+            // Validate the password
             if (password === 'lasagna') {
-                console.log("Login successful!");
-                // Clear any error messages
-                if (messageDiv) messageDiv.textContent = "";
+                console.log("Password correct. Redirecting to News...");
                 
-                // Redirect to the layout page
-                window.location.href = 'layout.html'; 
+                // Change the destination to news.html
+                window.location.href = 'news.html'; 
             } else {
-                // 4. Handle wrong password
-                console.log("Login failed: Incorrect password.");
+                // Handle incorrect password
                 if (messageDiv) {
+                    messageDiv.textContent = "Incorrect password. Access denied.";
                     messageDiv.style.color = "red";
-                    messageDiv.textContent = "Invalid password. Try again!";
                 }
+                console.log("Access denied: Incorrect password.");
             }
         });
     }
