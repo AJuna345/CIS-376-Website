@@ -23,8 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (messageDiv) messageDiv.textContent = "";
                 
                 // 4. Redirect to your combined news dashboard
-                // Change 'layout.html' to 'news.html' if that is what you named your file
-                window.location.href = 'layout.html'; 
+                window.location.href = 'pages/search.html'; 
             } else {
                 // 5. Handle the wrong password
                 console.log("Login failed: Incorrect password.");
